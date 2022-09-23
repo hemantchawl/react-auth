@@ -6,10 +6,12 @@ import { Login } from './components/Login';
 import { ProtectedSecond } from './components/ProtectSecond';
 import { Home } from './components/Home';
 import { Layout } from './components/Layout';
-
+import awsExports from "./aws-exports";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Amplify } from 'aws-amplify';
 
 import './App.css';
+Amplify.configure(awsExports);
 
 function MyRoutes() {
   return (
